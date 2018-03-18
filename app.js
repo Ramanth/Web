@@ -24,6 +24,6 @@ app.get('/tools-used', function(req,res){
 
 
 
-app.listen(3001, 'localhost', function() {
+app.listen(process.env.PORT, function() {
     console.log("Server started");
   });
