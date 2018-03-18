@@ -23,6 +23,11 @@ app.get('/tools-used', function(req,res){
 })
 
 
+//Navigating to Documentation Page
+app.get('/documentation', function(req,res){
+    res.render('documentation');
+})
+
 
 app.listen(process.env.PORT, function() {
     console.log("Server started");

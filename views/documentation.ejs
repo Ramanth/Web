@@ -1,0 +1,40 @@
+<% include partials/header %>
+<h1>
+    Heroku commands
+</h1>
+<h3>heroku create</h3>
+<p>When you create an app, a git remote (called heroku) is also created and associated with your local git repository.</p>
+
+<h3>git push heroku master</h3>
+<p>After making the changes and commiting to master, push to heroku to deploy the application</p>
+
+
+<h3>heroku ps:scale web=1</h3>
+<p>scaling the dyno to 1 on which the app will run</p>
+
+<h3>heroku open</h3>
+<p>Use this command to open the url in the browser after deploying and assigning the dyno</p>
+
+<h3>heroku logs --tail</h3>
+<p></p>
+
+
+<h3>heroku ps</h3>
+<p>run this command to check the dyno status, hours remainig for the month</p>
+
+<h3>heroku local web</h3>
+<p>use this command to start local server and run the app on localhost</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<% include partials/footer %>
