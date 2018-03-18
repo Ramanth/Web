@@ -1,0 +1,40 @@
+<% include partials/header %>
+<h1>
+    List of Tools Used for Raappo
+</h1>
+
+<TABLE  BORDER="5">
+        <TR>
+           <TH COLSPAN="2">
+              <H3><BR>Currently Using</H3>
+           </TH>
+        </TR>
+           <TH>Name</TH>
+           <TH>Tool Name</TH>
+        <% tools_used.currently_using.forEach(function(obj){ %>
+            <TR>
+                    <TD><%=obj.name%></TD>
+                    <TD><%=obj.tool%></TD>
+            </TR>
+        <% }) %>
+</TABLE>
+
+<p></p>
+
+<TABLE  BORDER="5">
+        <TR>
+           <TH COLSPAN="2">
+              <H3><BR>Planning to use</H3>
+           </TH>
+        </TR>
+           <TH>Name</TH>
+           <TH>Tool Name</TH>
+        <% tools_used.planning_to_use.forEach(function(obj){ %>
+            <TR>
+                    <TD><%=obj.name%></TD>
+                    <TD><%=obj.tool%></TD>
+            </TR>
+        <% }) %>
+</TABLE>
+
+<% include partials/footer %>

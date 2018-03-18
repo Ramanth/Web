@@ -1,0 +1,15 @@
+{
+    "routing":[{"name":"Tools Used",                       "url":"/tools-used"},
+               {"name":"API - Service Centers Listing",    "url":"/service-centers-listing-api-page"},
+               {"name":"Documentation",                    "url":"/documentation"}
+    ],
+
+    "tools_used":{
+      "currently_using":[{"name":"IDE",        "tool":"Visual Studio Code"},
+                         {"name":"Hosting"  ,  "tool":"Heroku"}
+      ],
+      "planning_to_use":[{"name":"Version Control", "tool":"Git"},
+                         {"name":" "  ,             "tool":""}
+      ]
+    }
+  }

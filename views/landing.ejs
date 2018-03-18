@@ -1,0 +1,12 @@
+<% include partials/header %>
+<h1>List of Raappo API</h1>
+<ul>
+	<% routing.forEach(function(obj){ %>
+		<li>
+				<a href="<%= obj.url %>">
+				 <%= obj.name %></a>
+			</li>
+	<% }) %>
+	
+</ul>
+<% include partials/footer %>
