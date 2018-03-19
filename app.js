@@ -5,6 +5,8 @@ var request = require('request');
 var bodyParser = require("body-parser");
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json()); 
+app.use(express.static('public'))
 
 _ = require('lodash');
 require(__dirname+'/index.js');
@@ -13,8 +15,12 @@ require(__dirname+'/index.js');
 routing = Document['routing'];
 tools_used = Document['tools_used'];
 
-//Landing Page
+//
 app.get('/', function(req,res){
+    res.render('index');
+});
+//Landing Page
+app.get('/rth', function(req,res){
     res.render('landing',{routing: routing});
 });
 
@@ -36,17 +42,19 @@ app.get('/documentation', function(req,res){
 
 
 app.post('/api-service-centers-listing', function(req,res){
-    
+    var x = req.body;
+    console.log(req);
     url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=17.418185,78.344226&radius=3000&types=car_repair&keyword=bike+repair+service+car&key=AIzaSyBE2zHLDa_2pBn3CcF6YeSeA6-5gNOSCx4';
     request(url, function(error, response, body){
         if(!error && response.statusCode == 200){
-            res.send(body);
+            var results = JSON.parse(body)
+            res.send(results);
         }
     })
 
 });
 
 
-app.listen(process.env.PORT, function() {
+app.listen(process.env.PORT||5000, function() {
     console.log("Server started");
   });
