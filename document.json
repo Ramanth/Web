@@ -9,8 +9,8 @@
       "currently_using":[{"name":"IDE",        "tool":"Visual Studio Code"},
                          {"name":"Hosting"  ,  "tool":"Heroku"}
       ],
-      "planning_to_use":[{"name":"Version Control", "tool":"Git"},
-                         {"name":" "  ,             "tool":""}
+      "planning_to_use":[{"name":"Version Control",                  "tool":"Git"},
+                         {"name":"Team Collaboration"  ,             "tool":"Slack"}
       ]
     }
   }
